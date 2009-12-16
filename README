@@ -1,0 +1,50 @@
+premake
+------------------------------------------
+Premake is a build script generator. Describe your project using the 
+full-featured Lua scripting language and then let Premake create the 
+input files for:
+
+    * MS Visual Studio 6, 2002, 2003, or 2005
+    * GNU make
+    * IC#Code SharpDevelop
+    * MonoDevelop
+
+Runtime requirements:
+  cygwin-1.7.0-67
+  libgcc1-4.3.4-3
+
+Build requirements:
+  binutils-2.19.51-1
+  cygport-0.9.10-1
+  gcc4-core-4.3.4-3
+  make-3.81-2
+
+Canonical website:
+  http://premake.sourceforge.net/
+
+Canonical download:
+  http://downloads.sourceforge.net/premake/
+
+-------------------------------------------
+
+Build instructions:
+  unpack premake-3.7-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./premake-3.7-X.cygport all
+
+This will create:
+  /usr/src/premake-3.7-X-src.tar.bz2
+  /usr/src/premake-3.7-X.tar.bz2
+
+-------------------------------------------
+
+Port Notes:
+
+----- version 3.7-1 -----
+Initial release for Cygwin 1.7.
+
+
+Cygwin port maintained by:
+http://sourceware.org/cygwinports/

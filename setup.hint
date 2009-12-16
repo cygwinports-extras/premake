@@ -1,0 +1,11 @@
+category: Devel
+requires: libgcc1
+sdesc: "Build script generator"
+ldesc: "Premake is a build script generator. Describe your project using 
+the full-featured Lua scripting language and then let Premake create the 
+input files for:
+
+    * MS Visual Studio 6, 2002, 2003, or 2005
+    * GNU make
+    * IC#Code SharpDevelop
+    * MonoDevelop"
