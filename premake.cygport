@@ -1,0 +1,35 @@
+NAME="premake"
+VERSION=3.7
+RELEASE=1
+CATEGORY="Devel"
+SUMMARY="Build script generator"
+DESCRIPTION="Premake is a build script generator. Describe your project using
+the full-featured Lua scripting language and then let Premake create the input
+files for GNU make or MonoDevelop"
+HOMEPAGE="http://premake.sourceforge.net/"
+SRC_URI="mirror://sourceforge/premake/premake-src-${VERSION}.zip"
+SRC_DIR="Premake-${VERSION}"
+
+PATCH_URI="3.5-os-cygwin.patch"
+
+MAKEOPTS+=" -j1"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygmake
+}
+
+src_test() {
+	if check_prog mcs
+	then
+		cd ${B}/Tests
+		verbose ${B}/bin/premake --file premake.lua --target gnu
+		cygmake clean
+		cygmake
+	fi
+}
+
+src_install() {
+	dobin ${B}/bin/premake
+}
